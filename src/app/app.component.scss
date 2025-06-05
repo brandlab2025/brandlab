@@ -1,0 +1,16 @@
+.split-background {
+  background: linear-gradient(to bottom, #f5f1e9 50%, #FFFFFF 50%); /* Top 50% beige, bottom 50% blue */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 50px;
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 10px;
+  }
+}
+

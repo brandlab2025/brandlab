@@ -1,0 +1,81 @@
+.faq-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f1e9;
+  padding: 50px;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
+}
+
+:host ::ng-deep {
+  .mat-accordion {
+    width: 100%;
+    max-width: 800px;
+
+    .mat-expansion-panel-header {
+      height: 90px;
+      background-color: #8cae9e !important;
+      color: #007bff;
+      font-size: 1.2em;
+      border-radius: 20px !important;
+
+      .mat-expansion-indicator::after {
+        content: "+";
+        border: none;
+        transform: none;
+        font-size: 1.5em;
+        color: #666; /* Cor do ícone */
+      }
+
+      .mat-expanded .mat-expansion-indicator::after {
+        content: "-";
+      }
+
+      .mat-expansion-panel-header-description {
+        flex-grow: 0;
+        margin-right: 0;
+
+        .mat-icon {
+          border-radius: 50%;
+          color: #8cae9e;
+          background-color: white !important;
+        }
+      }
+    }
+
+    .mat-expansion-panel {
+      margin-bottom: 10px;
+      background-color: #e6ecea; /* Cor de fundo do painel, conforme a imagem */
+      border-radius: 20px !important; /* Bordas arredondadas */
+      box-shadow: none; /* Remove sombra padrão */
+
+      &:focus, &:hover {
+        background: unset !important;
+      }
+
+      p {
+        color: #014aad;
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .mat-expanded {
+        background-color: #e6ecea;
+        border-radius: 20px 20px 0 0 !important; /* Arredondamento apenas no topo quando expandido */
+      }
+
+      .mat-panel-title {
+        font-size: 18px;
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        color: #f0eee5;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+
+.budget-card-container {
+  border-radius: 30px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #0056d2; /* Blue background */
+
+  .budget-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    .budget-card-title {
+      color: #fff;
+      font-size: 1.8em;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+    }
+
+    .budget-card-button {
+      width: fit-content;
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}
+
+
+

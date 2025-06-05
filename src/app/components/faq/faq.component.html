@@ -1,0 +1,20 @@
+<div class="faq-container">
+  <mat-accordion>
+    @for (item of faqItems; track item) {
+      <mat-expansion-panel (opened)="item.expanded = true" (closed)="item.expanded = false" class="custom-header" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ item.question }}</mat-panel-title>
+          <mat-panel-description>
+            @if (item.expanded) {
+              <mat-icon>remove</mat-icon>
+            } @else {
+              <mat-icon>add</mat-icon>
+            }
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <p>{{ item.answer }}</p>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</div>
