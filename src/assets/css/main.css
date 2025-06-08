@@ -676,10 +676,10 @@ p {
   color: rgba(0, 0, 0, 0.9);
 }
 .sticky .navbar .navbar-nav .nav-item a.active, .sticky .navbar .navbar-nav .nav-item a:hover {
-  color: #37C2CC;
+  color: #014aad;
 }
 .sticky .navbar .navbar-nav .nav-item a.active::before, .sticky .navbar .navbar-nav .nav-item a:hover::before {
-  background: #37C2CC;
+  background: #014aad;
 }
 .sticky .navbar .header-btn .main-btn {
   color: #fff;
@@ -816,7 +816,7 @@ p {
   }
 }
 .navbar-nav .nav-item a:hover, .navbar-nav .nav-item a.active {
-  color: #37C2CC;
+  color: #014aad;
 }
 
 @media (max-width: 767px) {

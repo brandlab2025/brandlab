@@ -20,8 +20,8 @@
                 <ul id="nav" class="navbar-nav ms-auto">
                   @for(item of menuItems; track item) {
                     <li class="nav-item">
-                      <a class="page-scroll" [class.active]="isActive(['/' + item])" [routerLinkActive]="['active']"
-                         (click)="onMenuItemClick()" href="{{item}}">{{item}}</a>
+                      <a class="page-scroll" [class.active]="item.isActive"
+                         (click)="onMenuItemClick()" href="{{item.id}}">{{item.name}}</a>
                     </li>
                   }
                 </ul>

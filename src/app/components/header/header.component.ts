@@ -1,42 +1,51 @@
-import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
-import {NavigationEnd, Router, RouterLinkActive} from '@angular/router';
-import {filter} from 'rxjs/operators';
-import {NgClass, NgForOf} from '@angular/common';
+import {Component, HostListener, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-header',
   imports: [
     NgClass,
-    RouterLinkActive
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   @ViewChild('navbarArea') navbarArea: any;
-  menuItems = ['SERVIÇOS', 'FAQS'];
+  menuItems = [{id: '#services', name: 'SERVIÇOS', isActive: false}, {id: '#faqs', name: 'FAQS', isActive: false}];
   activeUrl: string = '';
   toggler = false;
-  isSticky = false;
+  isSticky = true;
 
-  constructor(private router: Router) {
+  private observer: IntersectionObserver | undefined;
+
+  constructor() {
     this.onScroll();
   }
 
-  ngOnInit(): void {
-    this.activeUrl = this.router.url;
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
-        this.activeUrl = event.url;
-      });
+  ngOnInit() {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const foundItem = this.menuItems.find(item => item.id === `#${entry.target.id}`);
+          if (foundItem) {
+            foundItem.isActive = entry.isIntersecting;
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px 0px 0px',
+        threshold: 0.5
+      }
+    );
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section) => this.observer?.observe(section));
   }
 
-  isActive(url: any) {
-    if (url) {
-      return url[0] === this.activeUrl;
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
     }
-    return false;
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -84,5 +93,4 @@ export class HeaderComponent implements OnInit {
   get isTogglerActive() {
     return this.toggler;
   }
-
 }
