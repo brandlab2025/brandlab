@@ -9,19 +9,15 @@ import {NgClass, NgForOf} from '@angular/common';
     NgClass,
     RouterLinkActive
   ],
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  menuItems = ['SERVICES', 'FAQS'];
-
-
-  public isSticky = false;
-  public toggler = false;
-
-  public activeUrl: any;
-
-  @Input() menuData: any;
   @ViewChild('navbarArea') navbarArea: any;
+  menuItems = ['SERVIÇOS', 'FAQS'];
+  activeUrl: string = '';
+  toggler = false;
+  isSticky = false;
 
   constructor(private router: Router) {
     this.onScroll();

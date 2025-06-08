@@ -14,8 +14,9 @@ export interface ServiceCardProps {
 @Component({
   selector: 'app-service-card',
   imports: [],
-  templateUrl: './service-card.component.html'
+  templateUrl: './service-card.component.html',
+  styleUrls: ['./service-card.component.scss']
 })
 export class ServiceCardComponent {
-  props = input.required<any>();
+  // props = input.required<any>();
 }

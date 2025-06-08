@@ -1609,65 +1609,6 @@ p {
 /* ==========================
     FOOTER CSS
 ============================= */
-.footer .footer-widget {
-  margin-bottom: 50px;
-}
-.footer .footer-widget .logo {
-  margin-bottom: 30px;
-}
-.footer .footer-widget .desc {
-  margin-bottom: 25px;
-}
-.footer .footer-widget .social-links {
-  display: flex;
-  align-items: center;
-}
-.footer .footer-widget .social-links li a {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #E3FDFF;
-  color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 18px;
-  font-size: 22px;
-}
-.footer .footer-widget .social-links li a:hover {
-  background: #37C2CC;
-  color: #fff;
-}
-.footer .footer-widget h3, .footer .footer-widget .single-post-header, .footer .footer-widget .blog-roll-card-header {
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-.footer .footer-widget .links li a {
-  font-size: 16px;
-  line-height: 30px;
-  color: rgba(0, 0, 0, 0.7);
-}
-.footer .footer-widget .links li a:hover {
-  padding-left: 8px;
-  color: #37C2CC;
-}
-.footer .footer-widget form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.footer .footer-widget form input {
-  width: 100%;
-  background: #F1FEFF;
-  border: 1px solid #37C2CC;
-  box-sizing: border-box;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding: 15px 20px;
-}
-.footer .footer-widget form button {
-  text-align: right;
-}
 
 /* ======================
     DEFAULT CSS

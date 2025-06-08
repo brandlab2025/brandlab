@@ -5,10 +5,11 @@ import {FaqComponent} from './components/faq/faq.component';
 import {NgStyle} from '@angular/common';
 import {BudgetCardComponent} from './components/budget-card/budget-card.component';
 import {FooterComponent} from './components/footer/footer.component';
+import {ServiceCardComponent} from './components/service-card/service-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent, ServiceCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

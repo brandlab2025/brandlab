@@ -25,6 +25,13 @@
       font-size: 1.2em;
       border-radius: 20px !important;
 
+      .mat-expansion-panel-header-title {
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 18px;
+      }
+
       .mat-expansion-indicator::after {
         content: "+";
         border: none;
@@ -51,13 +58,9 @@
 
     .mat-expansion-panel {
       margin-bottom: 10px;
-      background-color: #e6ecea; /* Cor de fundo do painel, conforme a imagem */
-      border-radius: 20px !important; /* Bordas arredondadas */
-      box-shadow: none; /* Remove sombra padrão */
-
-      &:focus, &:hover {
-        background: unset !important;
-      }
+      background-color: #e6ecea;
+      border-radius: 20px !important;
+      box-shadow: none;
 
       p {
         color: #014aad;
@@ -67,7 +70,7 @@
 
       .mat-expanded {
         background-color: #e6ecea;
-        border-radius: 20px 20px 0 0 !important; /* Arredondamento apenas no topo quando expandido */
+        border-radius: 20px 20px 0 0 !important;
       }
 
       .mat-panel-title {
