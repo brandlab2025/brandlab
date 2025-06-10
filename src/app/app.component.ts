@@ -9,7 +9,7 @@ import {ServiceCardComponent} from './components/service-card/service-card.compo
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent, ServiceCardComponent],
+  imports: [HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent, ServiceCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
