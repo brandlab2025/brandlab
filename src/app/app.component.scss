@@ -52,3 +52,42 @@ $font-size-h2: 2.5rem;
   background-color: #f5f1e9;
 }
 
+
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--text-color);
+  padding: 2rem;
+}
+
+.marquee-gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 33%;
+
+  &.left {
+    left: 0;
+    background-image: linear-gradient(
+        to right,
+        var(--surface-background),
+        transparent
+    );
+  }
+
+  &.right {
+    right: 0;
+    background-image: linear-gradient(
+        to left,
+        var(--surface-background),
+        transparent
+    );
+  }
+}

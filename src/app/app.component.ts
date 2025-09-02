@@ -6,10 +6,11 @@ import {NgStyle} from '@angular/common';
 import {BudgetCardComponent} from './components/budget-card/budget-card.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ServiceCardComponent} from './components/service-card/service-card.component';
+import {NgxMarqueeComponent} from '@omnedia/ngx-marquee';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent, ServiceCardComponent],
+  imports: [HeaderComponent, FaqComponent, BudgetCardComponent, FooterComponent, ServiceCardComponent, NgxMarqueeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
