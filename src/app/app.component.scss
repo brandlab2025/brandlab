@@ -91,3 +91,33 @@ $font-size-h2: 2.5rem;
     );
   }
 }
+
+.img-teste {
+  display: none;
+
+  @media (max-width: 991px) {
+    display: block;
+    filter: blur(4px);
+  }
+}
+
+.banner-title {
+  margin-top: 0;
+
+  span {
+    font-size: 28px;
+    line-height: 40px;
+    color: $blue-color;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+
+    span {
+      font-size: 18px;
+      line-height: normal;
+      color: $blue-color;
+    }
+  }
+}
